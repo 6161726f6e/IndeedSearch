@@ -1,8 +1,8 @@
 # Overview
 This script is great to get all the results in an unfiltered way (e.g., no promoted jobs or other sorting/filtering) and allows results to come to you without creating an indeed account/profile or having to click through pages of results.
 - requires mailx and sendmail (or postfix) packages
+- sendmail must be properly configured to send from a vaild email account
 - encapsulate search terms with quotes
-- NOTE: email might go into SPAM, so need to whitelist your server email address
 
 # Usage
 ```
