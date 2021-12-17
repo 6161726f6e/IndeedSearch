@@ -8,7 +8,7 @@ noTerms=$5
 
 # search job 
 echo searching for must have $yesTerms, one of $anyTerms, and no $noTerms jobs in $zip
-curl -s --data-urlencode "as_and=$yesTerms" --data-urlencode "as_not=$noTerms" --data-urlencode "as_any=$anyTerms" -H "referer: https://www.indeed.com/?from=gnav-passport--passport-webapp&_ga=2.31817722.599025073.1618078236-916168758.1617925914" "https://www.indeed.com/jobs?as_phr=&as_ttl=&as_cmp=&jt=all&st=&salary=&radius=25&l=$zip&fromage=any&limit=50&sort=&psf=advsrch&from=advancedsearch" >jobResults.html 
+curl -s --data-urlencode "as_and=$yesTerms" --data-urlencode "as_not=$noTerms" --data-urlencode "as_any=$anyTerms" -H "referer: https://www.indeed.com/?from=gnav-passport--passport-webapp&_ga=2.31817722.599025073.1618078236-916168758.1617925914" "https://www.indeed.com/jobs?noci=1&as_phr=&as_ttl=&as_cmp=&jt=all&st=&salary=&radius=25&l=$zip&fromage=any&limit=50&sort=&psf=advsrch&from=advancedsearch" >jobResults.html 
 #curl -s --data-urlencode "as_and=$yesTerms" 
 grep "data-jk=" jobResults.html > jobIDs.txt
 echo "Unique Jobs = `wc -l jobIDs.txt`"
